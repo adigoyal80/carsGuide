@@ -1,36 +1,53 @@
 <template>
   <div id="app">
-    <PageHeader/>
-    <img src="./assets/logo.png">
-    <Container/>
+    <nav-bar></nav-bar>
+    
+    <container></container>
   </div>
 </template>
 
 <script>
 import Container from './components/Container'
-import PageHeader from './components/PageHeader'
+import NavBar from './components/NavBar'
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
     Container,
-    PageHeader
+    NavBar
   }
 }
 </script>
 
 <style lang="scss">
- #app {
+#app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-}
 
-body {
-  margin: 0;
-  padding: 0;
-}
 
+//breadcrumbs
+  .breadcrumb {
+    background: none;
+    
+    margin: 0;
+
+    .breadcrumb-item {
+      font-style: italic;
+
+      &+.breadcrumb-item::before {
+        content: '>';
+      }
+
+      .crumb-link {
+        color:black;
+      }
+    }
+  }
+  
+
+
+
+}
 </style>
