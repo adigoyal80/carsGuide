@@ -1,6 +1,6 @@
 # client
 
-> A Vue.js project
+> Technical exercise for carsguide by Aditya Goyal
 
 ## Build Setup
 
